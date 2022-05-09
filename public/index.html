@@ -24,10 +24,45 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+      /* @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); */
+      @import url("font/vibes.css");
+      @import url("font/macondo.css");
+      @import url("font/roboto.css");
+    </style>
+
+    <script src="%PUBLIC_URL%/tailwind.js"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              php: '#474A8A',
+              tailwind: '#36b7f0',
+              bs: '#8210f3',
+              reactjs: '#5ed3f3',
+              mongodb: '#4ca349',
+              mongodbr: '#429534',
+              mysql: '#f39e17',
+              nodejs: '#83cd29',
+              ci: '#e84c35',
+            },
+            
+          },
+          fontFamily: {
+            'vibes': ['"Great Vibes"'],
+            'macondo': ['Macondo'],
+            'roboto': ['Roboto'],
+          }
+        }
+      }
+    </script>
+
     <title>React App</title>
   </head>
-  <body>
+  <body class="font-macondo">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

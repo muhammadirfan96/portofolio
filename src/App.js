@@ -1,45 +1,26 @@
-// import logo from './logo.svg';
-// import './App.css';
-import Card from "./components/Card";
+import HasilKarya from "./components/HasilKarya";
+import Header from "./components/Header";
 import Heroku from "./components/Heroku";
+import Technology from "./components/Technology";
 
 function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-    <div className="container mx-auto px-4">
-      <div className="flex justify-center">
-        <div className="m-2">
+    <>
+      <div className="mx-auto">
+        <div className='p-4 bg-green-500 fixed top-0 right-0 left-0'>          
+          <Header />
+        </div>
+        <div className="grid justify-items-center sm:grid-cols-2 gap-4 mt-20">
           <Heroku />
         </div>
-      </div>
-      <div className="md:columns-3 flex justify-center">
-        
-        <div className="m-2">
-          <Card />
+        <div className="bg-slate-50 p-3">
+          <HasilKarya />
         </div>
-        <div className="m-2">
-          <Card />
-        </div>
-        <div className="m-2">
-          <Card />
+        <div className="grid justify-items-center gap-4 mt-4">
+          <Technology />
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
